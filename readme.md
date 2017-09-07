@@ -4,8 +4,7 @@
 
 * theme Flatabulous 
 
-`
-sudo rm -rf /usr/share/themes/{Arc-Flatabulous,Arc-Flatabulous-Darker,Arc-Flatabulous-Dark}
+`sudo rm -rf /usr/share/themes/{Arc-Flatabulous,Arc-Flatabulous-Darker,Arc-Flatabulous-Dark}
 rm -rf ~/.local/share/themes/{Arc-Flatabulous,Arc-Flatabulous-Darker,Arc-Flatabulous-Dark}
 rm -rf ~/.themes/{Arc-Flatabulous,Arc-Flatabulous-Darker,Arc-Flatabulous-Dark}
 
@@ -13,8 +12,8 @@ git clone https://github.com/andreisergiu98/arc-flatabulous-theme
 cd arc-flatabulous-theme
 
 ./autogen.sh --prefix=/usr
-sudo make install
-`
+sudo make install`
+
 * theme pop 
 
 `sudo add-apt-repository ppa:system76/pop
