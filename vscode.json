@@ -40,22 +40,22 @@
 	"editor.detectIndentation": false,
 	"editor.insertSpaces": false,
 	"files.autoSave": "afterDelay",
-	"php.validate.executablePath": "D:\\wamp\\bin\\php\\php7.0.10\\php.exe",
 	"editor.fontFamily": "Fira code Retina",
 	"editor.fontSize": 14,
 	"editor.fontLigatures": true,
-	"workbench.colorTheme": "Tinacious Design",
+	"workbench.colorTheme": "One Dark Pro",
 	"workbench.colorCustomizations": {
-		"statusBar.background": "#1d1d26",
-		"statusBar.debuggingBackground": "#1d1d26",
-		"statusBar.noFolderBackground": "#1d1d26",
-		"statusBar.foreground": "#ffcc66",
-		"activityBar.background": "#1d1d26",
-		"activityBar.foreground": "#ffcc66"
+		// "statusBar.background": "#1d1d26",
+		// "statusBar.debuggingBackground": "#1d1d26",
+		// "statusBar.noFolderBackground": "#1d1d26",
+		// "statusBar.foreground": "#ffcc66",
+		// "activityBar.background": "#1d1d26",
+		// "activityBar.foreground": "#ffcc66"
 	},
 	"editor.cursorBlinking": "expand",
-	"terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
 	"color-highlight.matchWords": true,
 	"css.colorDecorators.enable": false,
-	"scss.colorDecorators.enable": false
+	"scss.colorDecorators.enable": false,
+	"editor.snippetSuggestions": "top",
+	"extensions.ignoreRecommendations": false
 }
