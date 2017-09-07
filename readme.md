@@ -6,12 +6,12 @@
 
 `sudo rm -rf /usr/share/themes/{Arc-Flatabulous,Arc-Flatabulous-Darker,Arc-Flatabulous-Dark}
 rm -rf ~/.local/share/themes/{Arc-Flatabulous,Arc-Flatabulous-Darker,Arc-Flatabulous-Dark}
-rm -rf ~/.themes/{Arc-Flatabulous,Arc-Flatabulous-Darker,Arc-Flatabulous-Dark}
+rm -rf ~/.themes/{Arc-Flatabulous,Arc-Flatabulous-Darker,Arc-Flatabulous-Dark}`
 
-git clone https://github.com/andreisergiu98/arc-flatabulous-theme
-cd arc-flatabulous-theme
+`git clone https://github.com/andreisergiu98/arc-flatabulous-theme
+cd arc-flatabulous-theme`
 
-./autogen.sh --prefix=/usr
+`./autogen.sh --prefix=/usr
 sudo make install`
 
 * theme pop 
