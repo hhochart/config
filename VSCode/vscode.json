@@ -1,0 +1,61 @@
+{
+	"window.menuBarVisibility": "toggle",
+	"editor.renderWhitespace": "none",
+	"workbench.iconTheme": "file-icons",
+	"editor.renderControlCharacters": false,
+	// "[css]": {
+	// 	"editor.quickSuggestions": false
+	// },
+	"beautify.language": {
+		"js": {
+			"type": [
+				"javascript",
+				"json"
+			],
+			"filename": [
+				".jshintrc",
+				".jsbeautify"
+			]
+		},
+		"css": [
+			"css",
+			"scss",
+			"sass"
+		],
+		"html": [
+			"htm",
+			"html"
+		]
+	},
+	"editor.renderIndentGuides": true,
+	"editor.minimap.enabled": true,
+	"editor.minimap.maxColumn": 100,
+	"editor.minimap.renderCharacters": false,
+	"window.zoomLevel": 0,
+	"editor.mouseWheelZoom": true,
+	"window.openFoldersInNewWindow": "on",
+	"window.openFilesInNewWindow": "off",
+	"editor.selectionHighlight": true,
+	"files.trimTrailingWhitespace": true,
+	"editor.detectIndentation": false,
+	"editor.insertSpaces": false,
+	"files.autoSave": "afterDelay",
+	"editor.fontFamily": "Fira code Retina",
+	"editor.fontSize": 14,
+	"editor.fontLigatures": true,
+	"workbench.colorTheme": "One Dark Pro",
+	"workbench.colorCustomizations": {
+		// "statusBar.background": "#1d1d26",
+		// "statusBar.debuggingBackground": "#1d1d26",
+		// "statusBar.noFolderBackground": "#1d1d26",
+		// "statusBar.foreground": "#ffcc66",
+		// "activityBar.background": "#1d1d26",
+		// "activityBar.foreground": "#ffcc66"
+	},
+	"editor.cursorBlinking": "expand",
+	"color-highlight.matchWords": true,
+	"css.colorDecorators.enable": false,
+	"scss.colorDecorators.enable": false,
+	"editor.snippetSuggestions": "top",
+	"extensions.ignoreRecommendations": false
+}
