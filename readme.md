@@ -1,5 +1,18 @@
 # Ubuntu  + XFCE 
 
+## Tearing Ubuntu
+```
+sudo touch /etc/X11/xorg.conf
+
+Section "Device"
+   Identifier  "Intel Graphics"
+   Driver      "intel"
+   Option      "AccelMethod" "sna"
+   Option      "TearFree" "true"
+EndSection
+```
+
+
 ## XFCE
 
 * theme Flatabulous 
