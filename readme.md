@@ -46,12 +46,13 @@ sudo apt install pop-icon-theme
 * terminator
 
 themes https://github.com/mbadolato/iTerm2-Color-Schemes
-Palette : 
- palette = "#4a505d:#f81141:#23974a:#fd7e57:#285bff:#8c62fd:#366f9a:#ccd5e5:#61697a:#fc4a6d:#37bd58:#f6be48:#199ffd:#fc58f6:#50acae:#ffffff"
+```
+palette = "#4a505d:#f81141:#23974a:#fd7e57:#285bff:#8c62fd:#366f9a:#ccd5e5:#61697a:#fc4a6d:#37bd58:#f6be48:#199ffd:#fc58f6:#50acae:#ffffff"
 background_color = "#1e2127"
 cursor_color = "#fec309"
 foreground_color = "#abb2bf"
 background_image = None
+```
 
 ```
 sudo apt-get install terminator
@@ -75,6 +76,7 @@ sudo apt-get install curl git
 curl -L https://get.oh-my.fish | fish
 omf install eclm
 omf theme eclm
+omf install ocean
 ```
 
 * App
