@@ -79,6 +79,13 @@ omf theme eclm
 omf install ocean
 ```
 
+* git 
+
+```
+clé SHA
+installer hub
+```
+
 * App
     * Phpstorm
     * VSCode
