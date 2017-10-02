@@ -86,6 +86,14 @@ clé SHA
 installer hub
 ```
 
+* Son
+
+```
+sudo add-apt-repository ppa:nilarimogard/webupd8
+sudo apt-get update
+sudo apt-get install pulseaudio-equalizer
+```
+
 * App
     * Phpstorm
     * VSCode
