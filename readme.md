@@ -33,6 +33,31 @@ cd arc-flatabulous-theme
 sudo make install
 ```
 
+```
+sudo apt-get install rofi
+
+! =================
+! rofi
+! =================
+
+rofi.separator-style: 	solid
+rofi.font:				      "Fira Code Medium" 16
+rofi.bw:                0
+rofi.padding:           20
+rofi.hide-scrollbar:    true
+rofi.lines: 15
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! Copyright: Rasmus Steinke
+! ------------------------------------------------------------------------------
+rofi.color-enabled: true
+rofi.color-window: #273238, #273238, #1e2529
+rofi.color-normal: #273238, #c1c1c1, #273238, #394249, #ffffff
+rofi.color-active: #273238, #80cbc4, #273238, #394249, #80cbc4
+rofi.color-urgent: #273238, #ff1844, #273238, #394249, #ff1844
+
+```
+
 * theme pop 
 
 ```
