@@ -62,6 +62,7 @@ rofi.color-urgent: #273238, #ff1844, #273238, #394249, #ff1844
 ```
 xrdb ~/.Xresources
 ```
+   * Ajouter au raccourcis clavier désiré : rofi -show drun -modi drun
 
 * theme pop 
 
