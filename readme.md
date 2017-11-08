@@ -49,15 +49,16 @@ rofi.bw:                0
 rofi.padding:           20
 rofi.hide-scrollbar:    true
 rofi.lines: 15
+rofi.fullscreen: true
 ! ------------------------------------------------------------------------------
 ! ROFI Color theme
 ! Copyright: Rasmus Steinke
 ! ------------------------------------------------------------------------------
 rofi.color-enabled: true
-rofi.color-window: #273238, #273238, #1e2529
-rofi.color-normal: #273238, #c1c1c1, #273238, #394249, #ffffff
-rofi.color-active: #273238, #80cbc4, #273238, #394249, #80cbc4
-rofi.color-urgent: #273238, #ff1844, #273238, #394249, #ff1844
+rofi.color-window: #2f343e, #2f343e, #1e2529
+rofi.color-normal: #2f343e, #c1c1c1, #2f343e, #394249, #ffffff
+rofi.color-active: #2f343e, #80cbc4, #2f343e, #394249, #80cbc4
+rofi.color-urgent: #2f343e, #ff1844, #2f343e, #394249, #ff1844
 ```
 ```
 xrdb ~/.Xresources
@@ -124,6 +125,24 @@ sudo add-apt-repository ppa:nilarimogard/webupd8
 sudo apt-get update
 sudo apt-get install pulseaudio-equalizer
 ```
+
+* Server
+
+```
+sudo apt install apache2 php mysql-server libapache2-mod-php php-mysql
+sudo apt-get install phpmyadmin
+```
+
+Si bug config apache : ```sudo nano /etc/apache2/apache2.conf```
+et changer la ligne :
+```
+<Directory /var/www>
+```
+   à 
+   ```
+<Directory /var/www/html> AllowOverride All
+```
+
 
 * App
     * Phpstorm
