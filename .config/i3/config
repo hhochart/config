@@ -92,6 +92,15 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+workspace 1 output eDP1
+workspace 2 output eDP1
+workspace 3 output eDP1
+workspace 4 output eDP1
+workspace 5 output HDMI2
+workspace 6 output HDMI2
+workspace 7 output HDMI2
+workspace 8 output HDMI2
+
 set $ws1 1
 set $ws2 2
 set $ws3 3
@@ -132,12 +141,15 @@ exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg
 exec --no-startup-id x-terminal-emulator
 exec --no-startup-id google-chrome
 
+#shortcut for shuting down & locking
+bindsym $mod+Shift+o exec i3lock
+bindsym $mod+Shift+p exec i3-msg exit
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -172,15 +184,14 @@ gaps inner 10
 smart_gaps on
 smart_borders on
 
-set_from_resources $active color7
-
 # class                 border  backgr. text    indicator child_border
-client.focused          #292929 #79E0ED #ffffff #79E0ED   #292929
-client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
-client.unfocused        #333333 #222222 #888888 #292d2e   #222222
-client.urgent           #2f343a #9C6594 #ffffff #9C6594   #9C6594
-client.placeholder      #292929 #292929 #ffffff #292929   #292929
+client.focused          #00BCD4 #00BCD4 #ffffff #00BCD4   #00BCD4"""
+client.focused_inactive #00BCD4 #5f676a #ffffff #484e50   #5f676a
+client.unfocused        #00BCD4 #222222 #888888 #292d2e   #222222
+client.urgent           #00BCD4 #9C6594 #ffffff #9C6594   #9C6594
+client.placeholder      #00BCD4 #292929 #ffffff #292929   #292929
 
-client.background       #ffffff
+client.background       #ffffff"
 
+exec xrandr --output eDP1 --left-of HDMI2 --auto
 exec_always --no-startup-id "killall polybar; polybar -r default"
