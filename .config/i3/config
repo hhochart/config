@@ -89,6 +89,10 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
+# brightness and sound custom add
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+
 # focus the child container
 #bindsym $mod+d focus child
 
@@ -140,6 +144,7 @@ exec --no-startup-id compton
 exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg
 exec --no-startup-id x-terminal-emulator
 exec --no-startup-id google-chrome
+exec --no-startup-id pstorm
 
 #shortcut for shuting down & locking
 bindsym $mod+Shift+o exec i3lock
