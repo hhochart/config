@@ -38,6 +38,11 @@ sudo apt-get install rofi
 nano ~/.Xresources
 ```
 
+Infos sur une fenetre
+```
+xprop
+```
+
 ```
 ! =================
 ! rofi
