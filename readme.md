@@ -121,6 +121,7 @@ omf install ocean
 ```
 clé SHA
 installer hub
+if asking for pwd -> sudo nano .git/config -> ssh://git@github.com/username/repo.git
 ```
 
 * Son
