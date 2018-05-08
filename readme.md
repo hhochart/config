@@ -37,7 +37,7 @@ sudo make install
 sudo apt-get install rofi
 nano ~/.Xresources
 ```
-
+sudo apt install lxappearance for tweaking GTK app
 Infos sur une fenetre
 ```
 xprop
