@@ -18,12 +18,13 @@ alert = #bd2c40
 
 [global/wm]
 margin-top = 5
+margin-left = 10
 margin-bottom = 5
 
 [bar/default]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 27
+height = 30
 offset-x = 0
 offset-y = 0
 
@@ -44,13 +45,13 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = Ubuntu:pixelsize=15
-font-1 = FontAwesome:fontformat=truetype:size=13:heavy;1
+font-0 = Ubuntu:pixelsize=16;3
+font-1 = FontAwesome:fontformat=truetype:size=14;3
 font-2 = siji:pixelsize=10
 
 modules-left = bspwm i3
 modules-center = xwindow
-modules-right = volume battery date powermenu
+modules-right = xbacklight volume battery date
 
 tray-position = right
 tray-padding = 2
@@ -146,6 +147,7 @@ ws-icon-0 = 1;
 ws-icon-1 = 2;
 ws-icon-2 = 3;
 ws-icon-3 = 4;
+ws-icon-4 = 5;
 
 [module/mpd]
 type = internal/mpd
@@ -172,18 +174,23 @@ toggle-off-foreground = #66
 [module/xbacklight]
 type = internal/xbacklight
 
-format = <label> <bar>
-label = BL
+format = <label> <ramp>
+format-padding = 2
+format-underline = #9f78e1
+
+label-xbacklight = xbacklight
+
+ramp-0 = 
 
 bar-width = 10
 bar-indicator = │
 bar-indicator-foreground = #ff
-bar-indicator-font = 2
+bar-indicator-font = 1
 bar-fill = ─
-bar-fill-font = 2
+bar-fill-font = 4
 bar-fill-foreground = #9f78e1
 bar-empty = ─
-bar-empty-font = 2
+bar-empty-font =2
 bar-empty-foreground = ${colors.foreground-alt}
 
 [module/backlight-acpi]
@@ -245,7 +252,8 @@ label-disconnected-foreground = ${colors.foreground-alt}
 type = internal/date
 interval = 5
 
-date =
+date = 
+date-fontformat = 2
 date-alt = " %Y-%m-%d"
 
 time = %H:%M
@@ -255,13 +263,16 @@ format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #0a6cf5
 
-label = %date% %time%
+label = %time% %date%
+label-padding = 2
 
 [module/volume]
 type = internal/volume
 
-format-volume = <ramp-volume> <label-volume>
+format-volume = <label-volume> <ramp-volume>
 label-volume-foreground = ${root.foreground}
+format-volume-underline = #55aa55
+format-volume-padding = 2
 
 format-muted-prefix = " "
 format-muted-foreground = ${colors.foreground-alt}
@@ -280,7 +291,7 @@ bar-volume-foreground-5 = #f5a70a
 bar-volume-foreground-6 = #ff5555
 bar-volume-gradient = false
 bar-volume-indicator = │
-bar-volume-indicator-font = 2
+bar-volume-indicator-font = 5
 bar-volume-indicator-foreground = #ff
 bar-volume-fill = ─
 bar-volume-fill-font = 2
@@ -294,20 +305,23 @@ battery = BAT0
 adapter = ADP1
 full-at = 98
 
-format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ffb52a
+format-charging = <label-charging> <ramp-capacity>
+format-charging-underline = #0a6cf5
+format-charging-padding = 2
 
-format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-underline = ${self.format-charging-underline}
+format-discharging = <label-discharging> <ramp-capacity>
+format-discharging-underline = #ffb52a 
+format-discharging-padding = 2
 
 format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = ${self.format-charging-underline}
+format-full-underline = #55aa55
+format-full-padding = 2
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-foreground = ${colors.foreground-alt}
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 =  
+ramp-capacity-3 = 
 
 animation-charging-0 = 
 animation-charging-1 = 
