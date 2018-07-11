@@ -8,8 +8,8 @@
 ;=====================================================
 
 [colors]
-background = #282c34
-background-alt = #444
+background = transparent
+background-alt = #e6ee
 foreground = #dfdfdf
 foreground-alt = #55
 primary = #ffb52a
@@ -37,8 +37,9 @@ overline-color = #f00
 underline-size = 2
 underline-color = #00f
 
-border-bottom-size = 2
-border-bottom-color = #333
+# no borders
+# border-bottom-size = 2
+# border-bottom-color = transparent
 
 padding-left = 0
 padding-right = 2
@@ -313,7 +314,7 @@ format-discharging = <label-discharging> <ramp-capacity>
 format-discharging-underline = #ffb52a 
 format-discharging-padding = 2
 
-format-full-prefix = " "
+format-full = <label-full> <ramp-capacity>
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = #55aa55
 format-full-padding = 2

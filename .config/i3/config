@@ -143,7 +143,7 @@ assign [class="Code"] 2
 assign [class="Google-chrome|Firefox|Nightly"] 3
 assign [class="Slack|Discord|spotify|Rambox"] 4
 
-exec --no-startup-id "compton -f"
+exec --no-startup-id "compton --config ~/.config/compton.conf"
 exec --no-startup-id Gnome-terminal
 exec --no-startup-id "sh -c sleep 10; /opt/Rambox-0.5.16/rambox"
 exec --no-startup-id firefox
@@ -193,11 +193,11 @@ smart_gaps on
 smart_borders on
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #00BCD4 #00BCD4 #ffffff #00BCD4   #00BCD4"""
-client.focused_inactive #00BCD4 #5f676a #ffffff #484e50   #5f676a
-client.unfocused        #00BCD4 #222222 #888888 #292d2e   #222222
-client.urgent           #00BCD4 #9C6594 #ffffff #9C6594   #9C6594
-client.placeholder      #00BCD4 #292929 #ffffff #292929   #292929
+client.focused          #2cbcc9 #2cbcc9 #ffffff #2cbcc9   #2cbcc9"""
+client.focused_inactive #2cbcc9 #5f676a #ffffff #484e50   #5f676a
+client.unfocused        #2cbcc9 #222222 #888888 #292d2e   #222222
+client.urgent           #2cbcc9 #9C6594 #ffffff #9C6594   #9C6594
+client.placeholder      #2cbcc9 #292929 #ffffff #292929   #292929
 
 client.background       #ffffff"
 
@@ -212,3 +212,5 @@ exec_always --no-startup-id "xinput set-prop 11 306 0 0"
 # mouse horizontall scroll
 exec_always --no-startup-id "xinput set-prop 11 283 1 1"
 
+# background on startup with feh
+exec_always --no-startup-id "feh --bg-scale ~/Pictures/wallpaper.jpg"
