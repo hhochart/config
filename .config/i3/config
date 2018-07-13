@@ -143,7 +143,7 @@ assign [class="Code"] 2
 assign [class="Google-chrome|Firefox|Nightly"] 3
 assign [class="Slack|Discord|spotify|Rambox"] 4
 
-exec --no-startup-id "compton --config ~/.config/compton.conf"
+exec --no-startup-id "compton -f --config ~/.config/compton.conf"
 exec --no-startup-id Gnome-terminal
 exec --no-startup-id "sh -c sleep 10; /opt/Rambox-0.5.16/rambox"
 exec --no-startup-id firefox
@@ -152,6 +152,9 @@ exec --no-startup-id nm-applet
 #shortcut for shuting down & locking
 bindsym $mod+Shift+o exec i3lock -i "/home/mamba/Pictures/wallpaper.png"
 bindsym $mod+Shift+p exec i3-msg exit
+
+# background on startup with feh
+exec_always --no-startup-id "feh --bg-scale ~/Pictures/wallpaper.png"
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -186,18 +189,19 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-for_window [class=".*"] border pixel 2
+for_window [class=".*"] border pixel 1
 for_window [class=".*"] title_format "    %title"
-gaps inner 10
-smart_gaps on
+# for_window [class="polybar"] gaps outer 20
+gaps inner 20
+# smart_gaps on
 smart_borders on
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #2cbcc9 #2cbcc9 #ffffff #2cbcc9   #2cbcc9"""
-client.focused_inactive #2cbcc9 #5f676a #ffffff #484e50   #5f676a
-client.unfocused        #2cbcc9 #222222 #888888 #292d2e   #222222
-client.urgent           #2cbcc9 #9C6594 #ffffff #9C6594   #9C6594
-client.placeholder      #2cbcc9 #292929 #ffffff #292929   #292929
+client.focused          #ffb52a #ffb52a #ffffff #ffb52a   #ffb52a"""
+client.focused_inactive #ffb52a #5f676a #ffffff #484e50   #5f676a
+client.unfocused        #ffb52a #222222 #888888 #292d2e   #222222
+client.urgent           #ffb52a #9C6594 #ffffff #9C6594   #9C6594
+client.placeholder      #ffb52a #292929 #ffffff #292929   #292929
 
 client.background       #ffffff"
 
@@ -211,6 +215,3 @@ exec_always --no-startup-id "xinput set-prop 11 268 0"
 exec_always --no-startup-id "xinput set-prop 11 306 0 0"
 # mouse horizontall scroll
 exec_always --no-startup-id "xinput set-prop 11 283 1 1"
-
-# background on startup with feh
-exec_always --no-startup-id "feh --bg-scale ~/Pictures/wallpaper.jpg"

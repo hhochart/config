@@ -21,7 +21,7 @@
     #   %I  iconname (without its path)
     #   %p  progress value if set ([  0%] to [100%]) or nothing
     # Markup is allowed
-    format = "<b>%s</b>\n%b"
+    format = "%s\n%b"
 
     # Sort messages by urgency.
     sort = yes
@@ -64,7 +64,7 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "500x5-40+50"
+    geometry = "500x5-20+80"
 
     # Shrink window if it's smaller than the width.  Will be ignored if
     # width is 0.
@@ -117,7 +117,7 @@
     separator_height = 2
 
     # Padding between text and separator.
-    padding = 10
+    padding = 15
 
     # Horizontal padding.
     horizontal_padding = 8
@@ -143,13 +143,13 @@
 
     # Align icons left/right/off
     icon_position = left
-
+    max_icon_size = 80
     # Paths to default icons.
     icon_folders = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
 
 [frame]
     width = 1
-    color = "#00BCD4"
+    color = "#2e2e2e"
 
 [shortcuts]
 
@@ -175,17 +175,17 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#222222"
-    foreground = "#888888"
+    background = "#1e2529"
+    foreground = "#ffffff"
     timeout = 5
 
 [urgency_normal]
-    background = "#333333"
+    background = "#1e2529"
     foreground = "#ffffff"
     timeout = 5
 
 [urgency_critical]
-    background = "#222222"
+    background = "#1e2529"
     foreground = "#B14D4C"
     timeout = 5
 
@@ -243,5 +243,6 @@
 #    urgency = normal
 #
 # vim: ft=cfg
+
 
 
