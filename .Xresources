@@ -1,0 +1,20 @@
+! =================
+! rofi
+! =================
+
+rofi.separator-style: 	solid
+rofi.font:				      "Fira Code Medium" 16
+rofi.bw:                0
+rofi.padding:           20
+rofi.hide-scrollbar:    true
+rofi.lines: 15
+rofi.fullscreen: true
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! Copyright: Rasmus Steinke
+! ------------------------------------------------------------------------------
+rofi.color-enabled: true
+rofi.color-window: #2f343e, #2f343e, #1e2529
+rofi.color-normal: #2f343e, #c1c1c1, #2f343e, #394249, #ffffff
+rofi.color-active: #2f343e, #80cbc4, #2f343e, #394249, #80cbc4
+rofi.color-urgent: #2f343e, #ff1844, #2f343e, #394249, #ff1844
