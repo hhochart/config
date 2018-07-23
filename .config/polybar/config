@@ -52,14 +52,15 @@ font-0 = Operator SSm Book:pixelsize=14;3
 font-1 = FontAwesome:fontformat=truetype:size=14;3
 font-2 = siji:pixelsize=10
 
-modules-left = bspwm i3
+modules-left = bspwm i3 
 modules-center = xwindow
-modules-right = xbacklight volume battery date
+modules-right = spl spm spr spotify xbacklight volume battery date
 
-tray-position = none # notifs trays
+tray-position = none
 tray-padding = 2
-;tray-transparent = true
+# tray-transparent = true
 ;tray-background = #0063ff
+tray-detached = false
 
 #wm-restack = bspwm
 # wm-restack = i3
@@ -378,5 +379,36 @@ menu-2-0 = power off
 menu-2-0-exec = sudo poweroff
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
+
+# [module/docker]
+# type = custom/script
+# exec = docker ps -q | wc -l
+# interval = 1
+# label =  %output%
+
+[module/spl]
+type = custom/text
+content = ""
+click-left = playerctl -p spotify previous
+
+[module/spm]
+type = custom/text
+content = ""
+click-left = playerctl -p spotify play-pause
+
+[module/spr]
+type = custom/text
+content = ""
+click-left = playerctl -p spotify next
+
+[module/spotify]
+type = custom/script
+exec = sh ~/.config/polybar/spotify.sh
+label = %output:0:30:...%
+format = <label>
+format-prefix = " "
+format-underline = #55aa55
+format-padding = 2
+interval = 1
 
 ; vim:ft=dosini
