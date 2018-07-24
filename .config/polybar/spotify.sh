@@ -6,7 +6,15 @@ main() {
   fi  
   artist=$(playerctl metadata artist)
   title=$(playerctl metadata title)
-  echo $title - $artist
+  status=$(playerctl status)
+  # icon=""
+  if [ "$status" = Playing ]; then
+    icon=
+  else
+    icon=
+  fi
+  echo $icon '' $title - $artist
+
 }
 
 main "$@"

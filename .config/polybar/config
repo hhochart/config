@@ -386,29 +386,43 @@ menu-2-1-exec = menu-open-0
 # interval = 1
 # label =  %output%
 
-[module/spl]
-type = custom/text
-content = ""
-click-left = playerctl -p spotify previous
-
-[module/spm]
-type = custom/text
-content = ""
-click-left = playerctl -p spotify play-pause
-
-[module/spr]
-type = custom/text
-content = ""
-click-left = playerctl -p spotify next
-
-[module/spotify]
-type = custom/script
-exec = sh ~/.config/polybar/spotify.sh
-label = %output:0:30:...%
-format = <label>
-format-prefix = " "
+[section/spotifyStyle]
 format-underline = #55aa55
 format-padding = 2
+format-margin = -1
+module-margin-left = -1
+module-margin-right = 0
+
+# [module/spl]
+# inherit = section/spotifyStyle
+# type = custom/script
+# exec-if = pgrep -x spotify
+# exec = echo ""
+# click-left = playerctl -p spotify previous
+
+# [module/spm]
+# inherit = section/spotifyStyle
+# type = custom/script
+# exec-if = pgrep -x spotify
+# exec = echo ""
+# click-left = playerctl -p spotify play-pause
+
+# [module/spr]
+# inherit = section/spotifyStyle
+# type = custom/script
+# exec-if = pgrep -x spotify
+# exec = echo ""
+# click-left = playerctl -p spotify next
+
+[module/spotify]
+inherit = section/spotifyStyle
+type = custom/script
+exec-if = pgrep -x spotify
+exec = sh ~/.config/polybar/spotify.sh
+click-left = playerctl -p spotify play-pause
+label = %output:0:30:...%
+format = <label>
+# format-prefix = " "
 interval = 1
 
 ; vim:ft=dosini
