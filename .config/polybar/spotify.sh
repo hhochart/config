@@ -9,9 +9,9 @@ main() {
   status=$(playerctl status)
   # icon=""
   if [ "$status" = Playing ]; then
-    icon=
-  else
     icon=
+  else
+    icon=
   fi
   echo $icon '' $title - $artist
 
