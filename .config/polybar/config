@@ -55,7 +55,7 @@ font-2 = siji:pixelsize=10
 
 modules-left = bspwm i3 
 modules-center = xwindow 
-modules-right = spl spm spr spotify xbacklight volume battery date
+modules-right = spotify xbacklight volume battery date
 
 tray-position = right
 tray-padding = 2
