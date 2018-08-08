@@ -4,12 +4,12 @@
 
 rofi.opacity:                        100
 rofi.width:                          98
-rofi.lines:                          30
+rofi.lines:                          25
 rofi.columns:                        1
-rofi.font:                           Dank Mono 18
+rofi.font:                           AthensClassic 22
 rofi.bw:                             1
 rofi.location:                       0
-rofi.padding:                        40
+rofi.padding:                        48
 rofi.yoffset:                        30
 rofi.xoffset:                        0
 rofi.fixed-num-lines:                true
@@ -39,7 +39,7 @@ rofi.line-margin:                    2
 rofi.filter:                         
 rofi.separator-style:                none
 rofi.hide-scrollbar:                 true
-rofi.fullscreen:                     false
+rofi.fullscreen:                     true
 
 ! ------------------------------------------------------------------------------
 ! ROFI Color theme

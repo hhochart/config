@@ -139,13 +139,13 @@ bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 
 assign [class="X-terminal-emulator|Gnome-terminal"] 1
-assign [class="Code"] 2
-assign [class="Google-chrome|Firefox|Nightly"] 3
+assign [class="Code|jetbrains-phpstorm|jetbrains-webstorm"] 2
+assign [class="Google-chrome|Firefox|Nightly|Skype"] 3
 assign [class="Slack|Discord|spotify|Rambox"] 4
 
 exec --no-startup-id "compton -f --config ~/.config/compton.conf"
 exec --no-startup-id Gnome-terminal
-exec --no-startup-id "sh -c sleep 10; /opt/Rambox-0.5.16/rambox"
+exec --no-startup-id rambox
 exec --no-startup-id firefox
 exec --no-startup-id nm-applet
 
@@ -192,8 +192,8 @@ bindsym $mod+r mode "resize"
 for_window [class=".*"] border pixel 1
 for_window [class=".*"] title_format "    %title"
 # for_window [class="polybar"] gaps outer 20
-gaps inner 20
-# smart_gaps on
+gaps inner 10
+smart_gaps on
 smart_borders on
 
 # class                 border  backgr. text    indicator child_border

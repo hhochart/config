@@ -7,7 +7,6 @@ main() {
   artist=$(playerctl metadata artist)
   title=$(playerctl metadata title)
   status=$(playerctl status)
-  # icon=""
   if [ "$status" = Playing ]; then
     icon=
   else
