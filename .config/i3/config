@@ -205,7 +205,8 @@ client.placeholder      #ffb52a #292929 #ffffff #292929   #292929
 
 client.background       #ffffff"
 
-exec xrandr --output eDP1 --below HDMI1 --auto
+# exec_always xrandr --output eDP1 --below HDMI1 --auto
+exec_always xrandr --output eDP1 --right-of HDMI1 --auto
 exec_always --no-startup-id "killall polybar; polybar -r default"
 # constant deceleration - mouse speed
 exec_always --no-startup-id "xinput set-prop 11 270 2"

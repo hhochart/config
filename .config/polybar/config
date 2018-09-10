@@ -22,7 +22,7 @@ margin-left = 5
 margin-bottom = 5
 
 [bar/default]
-;monitor = ${env:MONITOR:HDMI-1}
+monitor = ${env:MONITOR:eDP1}
 # width = 1880px
 # offset-x = 20
 # offset-y = 20
@@ -32,7 +32,7 @@ height = 40
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-overline-size = 2
+overline-size = 4
 overline-color = #f00
 underline-size = 4
 underline-color = #00f
@@ -46,15 +46,14 @@ border-color = transparent
 # padding-left = 1
 # padding-right = 1
 module-margin-left = 1
-module-margin-right = 1
+module-margin-right = 0
 
-# font-0 = Operator Ssm Book:pixelsize=16;3
-font-0 = Ubuntu:pixelsize=16;3
+font-0 = Dank Mono:pixelsize=18;3
 font-1 = FontAwesome:fontformat=truetype:size=16;3
 font-2 = siji:pixelsize=10
 
-modules-left = bspwm i3 
-modules-center = xwindow 
+modules-left = bspwm i3
+modules-center = xwindow
 modules-right = spotify xbacklight volume battery date
 
 tray-position = right
@@ -82,8 +81,8 @@ label = %title:0:20:...%
 # format-background = "#616669"
 format-foreground = "#dfdfdf"
 format-width = 20
-format-prefix = "  " 
-format-padding = 2
+format-prefix = "  "
+format-padding = 1
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -114,18 +113,18 @@ type = internal/bspwm
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
-label-focused-padding = 2
+label-focused-padding = 1
 
 label-occupied = %index%
-label-occupied-padding = 2
+label-occupied-padding = 1
 
 label-urgent = %index%!
 label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
+label-urgent-padding = 1
 
 label-empty = %index%
 label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 2
+label-empty-padding = 1
 
 [module/i3]
 type = internal/i3
@@ -137,19 +136,19 @@ wrapping-scroll = false
 label-mode-foreground = #000
 label-mode-background = ${colors.primary}
 
-label-focused = %index%  %icon%
+label-focused = %index% %icon%
 label-focused-background = ${module/bspwm.label-focused-background}
 label-focused-underline = ${module/bspwm.label-focused-underline}
 label-focused-padding = ${module/bspwm.label-focused-padding}
 
-label-unfocused = %index%  %icon%
+label-unfocused = %index% %icon%
 label-unfocused-padding = ${module/bspwm.label-occupied-padding}
 
-label-urgent = %index%!  %icon%
+label-urgent = %index%! %icon%
 label-urgent-background = ${module/bspwm.label-urgent-background}
 label-urgent-padding = ${module/bspwm.label-urgent-padding}
 
-label-visible = %index%  %icon%
+label-visible = %index% %icon%
 label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
@@ -186,7 +185,7 @@ toggle-off-foreground = #66
 type = internal/xbacklight
 
 format = <label> <ramp>
-format-padding = 2
+format-padding = 1
 format-underline = #9f78e1
 
 label-xbacklight = xbacklight
@@ -275,7 +274,7 @@ format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #0a6cf5
 
 label = %time% %date%
-label-padding = 2
+label-padding = 1
 
 [module/volume]
 type = internal/volume
@@ -283,7 +282,7 @@ type = internal/volume
 format-volume = <label-volume> <ramp-volume>
 label-volume-foreground = ${root.foreground}
 format-volume-underline = #55aa55
-format-volume-padding = 2
+format-volume-padding = 1
 
 format-muted-prefix = " "
 format-muted-foreground = ${colors.foreground-alt}
@@ -318,20 +317,20 @@ full-at = 98
 
 format-charging = <label-charging> <ramp-capacity>
 format-charging-underline = #0a6cf5
-format-charging-padding = 2
+format-charging-padding = 1
 
 format-discharging = <label-discharging> <ramp-capacity>
-format-discharging-underline = #ffb52a 
-format-discharging-padding = 2
+format-discharging-underline = #ffb52a
+format-discharging-padding = 1
 
 format-full = <label-full> <ramp-capacity>
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = #55aa55
-format-full-padding = 2
+format-full-padding = 1
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
-ramp-capacity-2 =  
+ramp-capacity-2 = 
 ramp-capacity-3 = 
 
 animation-charging-0 = 
@@ -394,7 +393,7 @@ menu-2-1-exec = menu-open-0
 
 [section/spotifyStyle]
 format-underline = #55aa55
-format-padding = 2
+format-padding = 1
 
 # [module/spl]
 # inherit = section/spotifyStyle

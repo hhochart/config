@@ -1,0 +1,3 @@
+alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0| grep -E "state|to\ full|percentage"'
+set -g theme_display_date no
+source ~/.local/share/icons-in-terminal/icons.fish
