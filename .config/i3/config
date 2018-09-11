@@ -143,12 +143,6 @@ assign [class="Code|jetbrains-phpstorm|jetbrains-webstorm"] 2
 assign [class="Google-chrome|Firefox|Nightly|Skype"] 3
 assign [class="Slack|Discord|spotify|Rambox"] 4
 
-exec --no-startup-id "compton -f --config ~/.config/compton.conf"
-exec --no-startup-id Gnome-terminal
-exec --no-startup-id rambox
-exec --no-startup-id firefox
-exec --no-startup-id nm-applet
-
 #shortcut for shuting down & locking
 bindsym $mod+Shift+o exec i3lock -u -i "/home/mamba/Pictures/wallpaper.png"
 bindsym $mod+Shift+p exec i3-msg exit
@@ -205,8 +199,16 @@ client.placeholder      #ffb52a #292929 #ffffff #292929   #292929
 
 client.background       #ffffff"
 
+
+# Startup Apps
+exec --no-startup-id "compton -f --config ~/.config/compton.conf"
+exec --no-startup-id Gnome-terminal
+exec --no-startup-id rambox
+exec --no-startup-id google-chrome
+exec --no-startup-id nm-applet
+
 # exec_always xrandr --output eDP1 --below HDMI1 --auto
-exec_always xrandr --output eDP1 --right-of HDMI1 --auto
+exec_always --no-startup-id xrandr --output eDP1 --right-of HDMI1 --auto
 exec_always --no-startup-id "killall polybar; polybar -r default"
 # constant deceleration - mouse speed
 exec_always --no-startup-id "xinput set-prop 11 270 2"
