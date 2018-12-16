@@ -1,5 +1,5 @@
 [global]
-    font = Ubuntu 14
+    font = Ubuntu 16
 
     # Allow a small subset of html markup:
     #   <b>bold</b>
@@ -119,6 +119,9 @@
     # Padding between text and separator.
     padding = 15
 
+    corner_radius = 1
+
+
     # Horizontal padding.
     horizontal_padding = 8
 
@@ -149,7 +152,7 @@
 
 [frame]
     width = 1
-    color = "#2e2e2e"
+    color = "#ffffff"
 
 [shortcuts]
 
@@ -175,17 +178,17 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#1e2529"
+    background = "#1e1c3f"
     foreground = "#ffffff"
     timeout = 5
 
 [urgency_normal]
-    background = "#1e2529"
+    background = "#1e1c3f"
     foreground = "#ffffff"
     timeout = 5
 
 [urgency_critical]
-    background = "#1e2529"
+    background = "#1e1c3d"
     foreground = "#B14D4C"
     timeout = 5
 

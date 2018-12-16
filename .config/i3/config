@@ -17,8 +17,7 @@ focus_follows_mouse no
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:Ubuntu 11
-
+font pango:Iosevka 12
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
@@ -104,7 +103,7 @@ workspace 1 output eDP1
 workspace 2 output eDP1
 workspace 3 output eDP1
 workspace 4 output eDP1
-workspace 5 output HDMI1
+workspace 5 output DVI-I-1-1
 workspace 6 output HDMI1
 workspace 7 output HDMI1
 workspace 8 output HDMI1
@@ -139,12 +138,12 @@ bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 
 assign [class="X-terminal-emulator|Gnome-terminal"] 1
-assign [class="Code|jetbrains-phpstorm|jetbrains-webstorm"] 2
+assign [class="Code"] 2
 assign [class="Google-chrome|Firefox|Nightly|Skype"] 3
 assign [class="Slack|Discord|spotify|Rambox"] 4
 
 #shortcut for shuting down & locking
-bindsym $mod+Shift+o exec i3lock -u -i "/home/mamba/Pictures/wallpaper.png"
+bindsym $mod+Shift+o exec i3lock -u -t -i "/home/mamba/Pictures/wallpaper.png"
 bindsym $mod+Shift+p exec i3-msg exit
 
 # background on startup with feh
@@ -190,31 +189,51 @@ gaps inner 10
 smart_gaps on
 smart_borders on
 
-# class                 border  backgr. text    indicator child_border
+# # class                 border  backgr. text    indicator child_border
 client.focused          #ffb52a #ffb52a #ffffff #ffb52a   #ffb52a"""
-client.focused_inactive #ffb52a #5f676a #ffffff #484e50   #5f676a
-client.unfocused        #ffb52a #222222 #888888 #292d2e   #222222
-client.urgent           #ffb52a #9C6594 #ffffff #9C6594   #9C6594
-client.placeholder      #ffb52a #292929 #ffffff #292929   #292929
-
+client.focused_inactive #ffb52a #343252 #ffffff #343252   #343252
+client.unfocused        #ffb52a #343252 #c1c1c1 #1e1c3f   #343252
+client.urgent           #ffb52a #343252 #ffffff #343252   #343252
+client.placeholder      #ffb52a #343252 #ffffff #343252   #343252
 client.background       #ffffff"
 
+# class                 border  backgr. text    indicator child_border
+# client.focused          #9f78e1 #9f78e1 #ffffff #9f78e1   #9f78e1"""
+# client.focused_inactive #9f78e1 #343252 #ffffff #343252   #343252
+# client.unfocused        #9f78e1 #343252 #c1c1c1 #1e1c3f   #343252
+# client.urgent           #9f78e1 #343252 #ffffff #343252   #343252
+# client.placeholder      #9f78e1 #343252 #ffffff #343252   #343252
+# client.background       #ffffff"
 
-# Startup Apps
+### STARTUP APPS ###
 exec --no-startup-id "compton -f --config ~/.config/compton.conf"
-exec --no-startup-id Gnome-terminal
 exec --no-startup-id rambox
-exec --no-startup-id google-chrome
 exec --no-startup-id nm-applet
+exec --no-startup-id nm-appletf
+### STARTUP APPS ###
 
-# exec_always xrandr --output eDP1 --below HDMI1 --auto
-exec_always --no-startup-id xrandr --output eDP1 --right-of HDMI1 --auto
+### DISPLAY ###
+exec_always --no-startup-id xrandr --output eDP1 --primary
+exec_always --no-startup-id xrandr --output HDMI1 --above eDP1 --auto
+        # exec_always --no-startup-id xrandr --output DP1 --right-of eDP1 --auto --rotate normal
+exec_always --no-startup-id xrandr --output DVI-I-1-1 --right-of eDP1
+### DISPLAY ###
+
+#polybar
 exec_always --no-startup-id "killall polybar; polybar -r default"
-# constant deceleration - mouse speed
-exec_always --no-startup-id "xinput set-prop 11 270 2"
-# accel profile - mouse accel
-exec_always --no-startup-id "xinput set-prop 11 269 0"
-# noise cancellation - mouse smoothing (0 = no sharp angles)
-exec_always --no-startup-id "xinput set-prop 11 307 0 0"
-# two finger scrolling - horizontal scroll
-exec_always --no-startup-id "xinput set-prop 11 284 1 1"
+
+#### MOUSE ####
+        # constant deceleration - mouse speed
+        exec_always --no-startup-id "xinput set-prop 'ETD2303:00 04F3:3083 Touchpad' 'Device Accel Constant Deceleration' 1.5"
+        # accel profile - mouse accel
+        exec_always --no-startup-id "xinput set-prop 'ETD2303:00 04F3:3083 Touchpad' 'Device Accel Profile' 0"
+        # noise cancellation - mouse smoothing (0 = no sharp angles)
+        exec_always --no-startup-id "xinput set-prop 'ETD2303:00 04F3:3083 Touchpad' 'Synaptics Noise Cancellation' 0 0"
+        # two finger scrolling - horizontal scroll
+        exec_always --no-startup-id "xinput set-prop 'ETD2303:00 04F3:3083 Touchpad' 'Synaptics Two-Finger Scrolling' 1 1"
+        #velocity scaling
+        exec_always --no-startup-id "xinput set-prop 'ETD2303:00 04F3:3083 Touchpad' 'Device Accel Velocity Scaling' 1"
+### MOUSE ###
+# add those RSA keys for Github
+exec_always --no-startup-id "ssh-add"
+exec_always --no-startup-id "ssh-add ~/.ssh/rsa_work"

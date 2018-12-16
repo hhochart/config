@@ -1,18 +1,11 @@
 ;=====================================================
-;
-;   To learn more about how to configure Polybar
-;   go to https://github.com/jaagr/polybar
-;
-;   The README contains alot of information
-;
-;=====================================================
-
 [colors]
-background = #1e2529
+background = #1e1c3f
 background-alt = #e6ee
-foreground = #dfdfdf
+foreground = #ECE0E0
 foreground-alt = #55
 primary = #ffb52a
+# primary = #9f78e1
 secondary = #e60053
 alert = #bd2c40
 
@@ -27,14 +20,14 @@ monitor = ${env:MONITOR:eDP1}
 # offset-x = 20
 # offset-y = 20
 width = 100%
-height = 40
+height = 35
 ;background = ${xrdb:color9}
 background = ${colors.background}
 foreground = ${colors.foreground}
 
 overline-size = 4
 overline-color = #f00
-underline-size = 4
+underline-size = 3
 underline-color = #00f
 
 # no borders
@@ -46,14 +39,16 @@ border-color = transparent
 # padding-left = 1
 # padding-right = 1
 module-margin-left = 1
-module-margin-right = 0
+module-margin-right = 1
 
-font-0 = Dank Mono:pixelsize=18;3
+# font-0 = Iosevka:pixelsize=16;3
+font-0 = Typiqal Mono:pixelsize=18;3
 font-1 = FontAwesome:fontformat=truetype:size=16;3
 font-2 = siji:pixelsize=10
 
-modules-left = bspwm i3
+modules-left = i3
 modules-center = xwindow
+# spotify module causing bug
 modules-right = spotify xbacklight volume battery date
 
 tray-position = right
@@ -157,7 +152,9 @@ ws-icon-0 = 1;
 ws-icon-1 = 2;
 ws-icon-2 = 3;
 ws-icon-3 = 4;
-ws-icon-4 = 5;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
 
 [module/mpd]
 type = internal/mpd
@@ -320,7 +317,7 @@ format-charging-underline = #0a6cf5
 format-charging-padding = 1
 
 format-discharging = <label-discharging> <ramp-capacity>
-format-discharging-underline = #ffb52a
+format-discharging-underline = ${colors.primary}
 format-discharging-padding = 1
 
 format-full = <label-full> <ramp-capacity>
