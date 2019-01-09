@@ -1,7 +1,7 @@
 # Ubuntu 18.04 (Beaver) + i3
 
 ## Screen
-![Screenshot](screen-lase.png)
+![Screenshot](screen-laser.png)
 
 ## Tearing Ubuntu
 ```
