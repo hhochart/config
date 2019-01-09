@@ -1,7 +1,7 @@
-# Ubuntu 18.04 (Beaver) + i3 
+# Ubuntu 18.04 (Beaver) + i3
 
 ## Screen
-![Screenshot](screen.png)
+![Screenshot](screen-lase.png)
 
 ## Tearing Ubuntu
 ```
@@ -26,21 +26,21 @@ cp git/.Xresources ~/.Xresources
 
 Tweaking GTK app :
 ``
-sudo apt install lxappearance 
+sudo apt install lxappearance
 ``
 
-Window Info / Kill: 
+Window Info / Kill:
 ```
 xprop / xkill
 ```
 
-Reload Xresources : 
+Reload Xresources :
 xrdb ~/.Xresources
 
 
 ## Icons
 
-Pop icon theme : 
+Pop icon theme :
 
 ```
 sudo add-apt-repository ppa:system76/pop
@@ -59,7 +59,7 @@ sudo apt-get install fish
 sudo chsh -s /bin/fish
 ```
 
-## OhMyFish 
+## OhMyFish
 
 ```
 sudo apt-get install curl git
@@ -92,7 +92,7 @@ sudo apt install apache2 php mysql-server libapache2-mod-php php-mysql
 sudo apt-get install phpmyadmin
 ```
 
-Apache not working might be : 
+Apache not working might be :
 ```
 sudo nano /etc/apache2/apache2.conf
 ```
@@ -106,7 +106,7 @@ to
 ```
 
 ## Notifications
-Using Dunst 
+Using Dunst
 ```
 cp git/.config/dunst/dunstrc ~/.config/dunst/dunstrc
 ```
