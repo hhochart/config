@@ -1,5 +1,5 @@
 [global]
-    font = Ubuntu 16
+    font = Pragmata Pro 16
 
     # Allow a small subset of html markup:
     #   <b>bold</b>
@@ -151,8 +151,8 @@
     icon_folders = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
 
 [frame]
-    width = 1
-    color = "#ffffff"
+    width = 0
+    color = "#f39fd4"
 
 [shortcuts]
 
@@ -178,18 +178,18 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#1e1c3f"
-    foreground = "#ffffff"
+    background = "#eb64b9"
+    foreground = "#161130f"
     timeout = 5
 
 [urgency_normal]
-    background = "#1e1c3f"
-    foreground = "#ffffff"
+    background = "#eb64b9"
+    foreground = "#161130f"
     timeout = 5
 
 [urgency_critical]
-    background = "#1e1c3d"
-    foreground = "#B14D4C"
+    background = "#eb64b9f"
+    foreground = "#f00f00"
     timeout = 5
 
 

@@ -1,13 +1,19 @@
 ;=====================================================
 [colors]
-background = #1e1c3f
-background-alt = #e6ee
-foreground = #ECE0E0
-foreground-alt = #55
-primary = #ffb52a
-# primary = #9f78e1
-secondary = #e60053
+background = #27212e
+foreground = #b4dce7
+
+
+background-alt = #
+foreground-alt = #
+primary = #eb64b9
+secondary = #ffe261
+third = #40b4c4
 alert = #bd2c40
+
+[spacing]
+padding-inner = 1
+padding-inner-left = 1
 
 [global/wm]
 margin-top = 5
@@ -36,19 +42,19 @@ underline-color = #00f
 # border-right-size = 20
 border-color = transparent
 
-# padding-left = 1
-# padding-right = 1
+# padding-left = 5
+# padding-right = 5
 module-margin-left = 1
 module-margin-right = 1
 
 # font-0 = Iosevka:pixelsize=16;3
-font-0 = Typiqal Mono:pixelsize=18;3
+font-0 = Hermit :pixelsize=15;3
+# font-0 = Road Rage:pixelsize=16;3
 font-1 = FontAwesome:fontformat=truetype:size=16;3
 font-2 = siji:pixelsize=10
 
 modules-left = i3
 modules-center = xwindow
-# spotify module causing bug
 modules-right = spotify xbacklight volume battery date
 
 tray-position = right
@@ -74,7 +80,7 @@ tray-detached = false
 type = internal/xwindow
 label = %title:0:20:...%
 # format-background = "#616669"
-format-foreground = "#dfdfdf"
+format-foreground = ${colors.foreground}
 format-width = 20
 format-prefix = "  "
 format-padding = 1
@@ -127,26 +133,26 @@ format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
 
-# label-mode-padding = 2
+label-mode-padding = ${spacing.padding-inner-left}
 label-mode-foreground = #000
 label-mode-background = ${colors.primary}
 
 label-focused = %index% %icon%
 label-focused-background = ${module/bspwm.label-focused-background}
 label-focused-underline = ${module/bspwm.label-focused-underline}
-label-focused-padding = ${module/bspwm.label-focused-padding}
+label-focused-padding = ${spacing.padding-inner-left}
 
 label-unfocused = %index% %icon%
-label-unfocused-padding = ${module/bspwm.label-occupied-padding}
+label-unfocused-padding = ${spacing.padding-inner-left}
 
 label-urgent = %index%! %icon%
 label-urgent-background = ${module/bspwm.label-urgent-background}
-label-urgent-padding = ${module/bspwm.label-urgent-padding}
+label-urgent-padding = ${spacing.padding-inner-left}
 
 label-visible = %index% %icon%
 label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${self.label-focused-underline}
-label-visible-padding = ${self.label-focused-padding}
+label-visible-padding = ${spacing.padding-inner-left}
 
 ws-icon-0 = 1;
 ws-icon-1 = 2;
@@ -182,9 +188,10 @@ toggle-off-foreground = #66
 type = internal/xbacklight
 
 format = <label> <ramp>
-format-padding = 1
+format-padding = ${spacing.padding-inner}
 format-underline = #9f78e1
 
+# label = "%percentage% "
 label-xbacklight = xbacklight
 
 ramp-0 = 
@@ -268,18 +275,21 @@ time-alt = %H:%M:%S
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
+format-underline = ${colors.third}
 
 label = %time% %date%
-label-padding = 1
+label-padding = ${spacing.padding-inner}
 
 [module/volume]
 type = internal/volume
 
 format-volume = <label-volume> <ramp-volume>
 label-volume-foreground = ${root.foreground}
-format-volume-underline = #55aa55
-format-volume-padding = 1
+format-volume-underline = ${colors.third}
+format-volume-padding = ${spacing.padding-inner}
+
+
+# label-volume = "%percentage% "
 
 format-muted-prefix = " "
 format-muted-foreground = ${colors.foreground-alt}
@@ -314,16 +324,20 @@ full-at = 98
 
 format-charging = <label-charging> <ramp-capacity>
 format-charging-underline = #0a6cf5
-format-charging-padding = 1
+format-charging-padding = ${spacing.padding-inner}
 
 format-discharging = <label-discharging> <ramp-capacity>
-format-discharging-underline = ${colors.primary}
-format-discharging-padding = 1
+format-discharging-underline = ${colors.secondary}
+format-discharging-padding = ${spacing.padding-inner}
 
 format-full = <label-full> <ramp-capacity>
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = #55aa55
-format-full-padding = 1
+format-full-padding = ${spacing.padding-inner}
+
+# label-full = "%percentage% "
+# label-charging = "%percentage% "
+# label-discharging = "%percentage% "
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
@@ -333,7 +347,7 @@ ramp-capacity-3 = 
 animation-charging-0 = 
 animation-charging-1 = 
 animation-charging-2 = 
-animation-charging-foreground = ${colors.foreground-alt}
+animation-charging-foreground = ${colors.secondary}
 animation-charging-framerate = 750
 
 [module/temperature]
@@ -389,29 +403,8 @@ menu-2-1-exec = menu-open-0
 # label =  %output%
 
 [section/spotifyStyle]
-format-underline = #55aa55
-format-padding = 1
-
-# [module/spl]
-# inherit = section/spotifyStyle
-# type = custom/script
-# exec-if = pgrep -x spotify
-# exec = echo ""
-# click-left = playerctl -p spotify previous
-
-# [module/spm]
-# inherit = section/spotifyStyle
-# type = custom/script
-# exec-if = pgrep -x spotify
-# exec = echo ""
-# click-left = playerctl -p spotify play-pause
-
-# [module/spr]
-# inherit = section/spotifyStyle
-# type = custom/script
-# exec-if = pgrep -x spotify
-# exec = echo ""
-# click-left = playerctl -p spotify next
+format-underline = ${colors.third}
+format-padding = ${spacing.padding-inner}
 
 [module/spotify]
 inherit = section/spotifyStyle

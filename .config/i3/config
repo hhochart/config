@@ -143,7 +143,7 @@ assign [class="Google-chrome|Firefox|Nightly|Skype"] 3
 assign [class="Slack|Discord|spotify|Rambox"] 4
 
 #shortcut for shuting down & locking
-bindsym $mod+Shift+o exec i3lock -u -t -i "/home/mamba/Pictures/wallpaper.png"
+bindsym $mod+Shift+o exec i3lock -u -t -i "/home/mamba/Pictures/wallpaper-lock.png"
 bindsym $mod+Shift+p exec i3-msg exit
 
 # background on startup with feh
@@ -190,20 +190,13 @@ smart_gaps on
 smart_borders on
 
 # # class                 border  backgr. text    indicator child_border
-client.focused          #ffb52a #ffb52a #ffffff #ffb52a   #ffb52a"""
-client.focused_inactive #ffb52a #343252 #ffffff #343252   #343252
-client.unfocused        #ffb52a #343252 #c1c1c1 #1e1c3f   #343252
-client.urgent           #ffb52a #343252 #ffffff #343252   #343252
-client.placeholder      #ffb52a #343252 #ffffff #343252   #343252
+client.focused          #eb64b9 #eb64b9 #ffffff #eb64b9   #eb64b9"""
+client.focused_inactive #eb64b9 #0c0a20 #ffffff #0c0a20   #0c0a20
+client.unfocused        #eb64b9 #0c0a20 #c1c1c1 #161130   #0c0a20
+client.urgent           #eb64b9 #0c0a20 #ffffff #0c0a20   #0c0a20
+client.placeholder      #eb64b9 #0c0a20 #ffffff #0c0a20   #0c0a20
 client.background       #ffffff"
 
-# class                 border  backgr. text    indicator child_border
-# client.focused          #9f78e1 #9f78e1 #ffffff #9f78e1   #9f78e1"""
-# client.focused_inactive #9f78e1 #343252 #ffffff #343252   #343252
-# client.unfocused        #9f78e1 #343252 #c1c1c1 #1e1c3f   #343252
-# client.urgent           #9f78e1 #343252 #ffffff #343252   #343252
-# client.placeholder      #9f78e1 #343252 #ffffff #343252   #343252
-# client.background       #ffffff"
 
 ### STARTUP APPS ###
 exec --no-startup-id "compton -f --config ~/.config/compton.conf"
