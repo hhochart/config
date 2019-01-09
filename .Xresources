@@ -3,14 +3,14 @@
 ! =================
 
 rofi.opacity:                        100
-rofi.width:                          98
+rofi.width:                          30
 rofi.lines:                          25
 rofi.columns:                        1
-rofi.font:                           Typiqal Mono 22
+rofi.font:                           Operator Ssm Book 16
 rofi.bw:                             1
 rofi.location:                       0
-rofi.padding:                        48
-rofi.yoffset:                        30
+rofi.padding:                        30
+rofi.yoffset:                        0
 rofi.xoffset:                        0
 rofi.fixed-num-lines:                true
 rofi.terminal:                       rofi-sensible-terminal
@@ -39,15 +39,16 @@ rofi.line-margin:                    2
 rofi.filter:
 rofi.separator-style:                none
 rofi.hide-scrollbar:                 true
-rofi.fullscreen:                     true
+rofi.fullscreen:                     false
 
 ! ------------------------------------------------------------------------------
 ! ROFI Color theme
 ! Copyright: Rasmus Steinke
 ! ------------------------------------------------------------------------------
 rofi.color-enabled: true
-rofi.color-window: #1e1c3f, #1e1c3f, #1e1c3f
-rofi.color-normal: #1e1c3f, #ECE0E0, #1e1c3f, #343252, #ECE0E0
-rofi.color-active: #1e1c3f, #80cbc4, #1e1c3f, #343252, #80cbc4
-rofi.color-urgent: #1e1c3f, #ff1844, #1e1c3f, #343252, #ff1844
+rofi.color-window: #eb64b9, #27212e, #f39fd4
+rofi.color-normal: #eb64b9, #27212e, #eb64b9, #f39fd4, #27212e
+rofi.color-active: #eb64b9, #80cbc4, #eb64b9, #f39fd4, #80cbc4
+rofi.color-urgent: #eb64b9, #ff1844, #eb64b9, #f39fd4, #ff1844
 Xcursor.size: 12
+xft.dpi: 288
