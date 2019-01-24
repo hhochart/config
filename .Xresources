@@ -6,7 +6,7 @@ rofi.opacity:                        100
 rofi.width:                          98
 rofi.lines:                          25
 rofi.columns:                        1
-rofi.font:                           Typiqal Mono 22
+rofi.font:                           Iosevka 22
 rofi.bw:                             1
 rofi.location:                       0
 rofi.padding:                        48
@@ -47,7 +47,16 @@ rofi.fullscreen:                     true
 ! ------------------------------------------------------------------------------
 rofi.color-enabled: true
 rofi.color-window: #1e1c3f, #1e1c3f, #1e1c3f
-rofi.color-normal: #1e1c3f, #ECE0E0, #1e1c3f, #343252, #ECE0E0
+rofi.color-normal: #1e1c3f, #a599e9, #1e1c3f, #343252, #a599e9
 rofi.color-active: #1e1c3f, #80cbc4, #1e1c3f, #343252, #80cbc4
 rofi.color-urgent: #1e1c3f, #ff1844, #1e1c3f, #343252, #ff1844
 Xcursor.size: 12
+
+Xft.autohint: 0
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+!Xft.dpi: 140
+Xft.dpi: 100

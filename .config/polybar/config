@@ -2,11 +2,11 @@
 [colors]
 background = #1e1c3f
 background-alt = #e6ee
-foreground = #ECE0E0
+foreground = #a599e9
 foreground-alt = #55
 primary = #ffb52a
-# primary = #9f78e1
-secondary = #e60053
+secondary = #9f78e1
+third = #40b4c4
 alert = #bd2c40
 
 [global/wm]
@@ -16,6 +16,7 @@ margin-bottom = 5
 
 [bar/default]
 monitor = ${env:MONITOR:eDP1}
+# enable-ipc = true
 # width = 1880px
 # offset-x = 20
 # offset-y = 20
@@ -25,10 +26,10 @@ height = 35
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-overline-size = 4
+overline-size = 2
 overline-color = #f00
-underline-size = 3
-underline-color = #00f
+underline-size = 2
+underline-color = ${colors.third}
 
 # no borders
 # border-top-size = 20
@@ -42,7 +43,7 @@ module-margin-left = 1
 module-margin-right = 1
 
 # font-0 = Iosevka:pixelsize=16;3
-font-0 = Typiqal Mono:pixelsize=18;3
+font-0 = Share Tech mono:pixelsize=16;3
 font-1 = FontAwesome:fontformat=truetype:size=16;3
 font-2 = siji:pixelsize=10
 
@@ -69,12 +70,11 @@ tray-detached = false
 ;scroll-up = i3wm-wsnext
 ;scroll-down = i3wm-wsprev
 
-
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:20:...%
 # format-background = "#616669"
-format-foreground = "#dfdfdf"
+format-foreground = ${colors.foreground}
 format-width = 20
 format-prefix = "  "
 format-padding = 1
@@ -181,9 +181,10 @@ toggle-off-foreground = #66
 [module/xbacklight]
 type = internal/xbacklight
 
+label = %percentage%
 format = <label> <ramp>
 format-padding = 1
-format-underline = #9f78e1
+format-underline = ${colors.secondary}
 
 label-xbacklight = xbacklight
 
@@ -195,7 +196,7 @@ bar-indicator-foreground = #ff
 bar-indicator-font = 1
 bar-fill = ─
 bar-fill-font = 4
-bar-fill-foreground = #9f78e1
+bar-fill-foreground = ${colors.secondary}
 bar-empty = ─
 bar-empty-font =2
 bar-empty-foreground = ${colors.foreground-alt}
@@ -246,7 +247,7 @@ type = internal/network
 interface = eth0
 interval = 3.0
 
-format-connected-underline = #55aa55
+format-connected-underline = ${colors.third}
 format-connected-prefix = " "
 format-connected-foreground-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
@@ -268,7 +269,7 @@ time-alt = %H:%M:%S
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
+format-underline = ${colors.secondary}
 
 label = %time% %date%
 label-padding = 1
@@ -276,9 +277,10 @@ label-padding = 1
 [module/volume]
 type = internal/volume
 
+label-volume = %percentage%
 format-volume = <label-volume> <ramp-volume>
 label-volume-foreground = ${root.foreground}
-format-volume-underline = #55aa55
+format-volume-underline = ${colors.third}
 format-volume-padding = 1
 
 format-muted-prefix = " "
@@ -289,12 +291,12 @@ ramp-volume-1=
 ramp-volume-2=
 
 bar-volume-width = 10
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
+bar-volume-foreground-0 = ${colors.third}
+bar-volume-foreground-1 = ${colors.third}
+bar-volume-foreground-2 = ${colors.third}
+bar-volume-foreground-3 = ${colors.third}
+bar-volume-foreground-4 = ${colors.third}
+bar-volume-foreground-5 = ${colors.primary}
 bar-volume-foreground-6 = #ff5555
 bar-volume-gradient = false
 bar-volume-indicator = │
@@ -312,6 +314,10 @@ battery = BAT0
 adapter = ADP1
 full-at = 98
 
+label-charging = %percentage%
+label-discharging = %percentage%
+label-full = %percentage%
+
 format-charging = <label-charging> <ramp-capacity>
 format-charging-underline = #0a6cf5
 format-charging-padding = 1
@@ -322,7 +328,7 @@ format-discharging-padding = 1
 
 format-full = <label-full> <ramp-capacity>
 format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = #55aa55
+format-full-underline = ${colors.third}
 format-full-padding = 1
 
 ramp-capacity-0 = 
@@ -382,36 +388,9 @@ menu-2-0-exec = sudo poweroff
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
 
-# [module/docker]
-# type = custom/script
-# exec = docker ps -q | wc -l
-# interval = 1
-# label =  %output%
-
 [section/spotifyStyle]
-format-underline = #55aa55
+format-underline = ${colors.third}
 format-padding = 1
-
-# [module/spl]
-# inherit = section/spotifyStyle
-# type = custom/script
-# exec-if = pgrep -x spotify
-# exec = echo ""
-# click-left = playerctl -p spotify previous
-
-# [module/spm]
-# inherit = section/spotifyStyle
-# type = custom/script
-# exec-if = pgrep -x spotify
-# exec = echo ""
-# click-left = playerctl -p spotify play-pause
-
-# [module/spr]
-# inherit = section/spotifyStyle
-# type = custom/script
-# exec-if = pgrep -x spotify
-# exec = echo ""
-# click-left = playerctl -p spotify next
 
 [module/spotify]
 inherit = section/spotifyStyle

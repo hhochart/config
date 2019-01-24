@@ -182,7 +182,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-for_window [class=".*"] border pixel 1
+for_window [class=".*"] border pixel 2
 for_window [class=".*"] title_format "    %title"
 # for_window [class="polybar"] gaps outer 20
 gaps inner 10
@@ -190,17 +190,17 @@ smart_gaps on
 smart_borders on
 
 # # class                 border  backgr. text    indicator child_border
-client.focused          #ffb52a #ffb52a #ffffff #ffb52a   #ffb52a"""
-client.focused_inactive #ffb52a #343252 #ffffff #343252   #343252
-client.unfocused        #ffb52a #343252 #c1c1c1 #1e1c3f   #343252
-client.urgent           #ffb52a #343252 #ffffff #343252   #343252
-client.placeholder      #ffb52a #343252 #ffffff #343252   #343252
+client.focused          #40b4c4 #40b4c4 #ffffff #40b4c4   #40b4c4
+client.focused_inactive #40b4c4 #1e1c3f #ffffff #1e1c3f   #1e1c3f
+client.unfocused        #40b4c4 #1e1c3f #ffffff #ff0000   #1e1c3f
+client.urgent           #40b4c4 #1e1c3f #ffffff #1e1c3f   #1e1c3f
+client.placeholder      #40b4c4 #1e1c3f #ffffff #1e1c3f   #1e1c3f
 client.background       #ffffff"
 
 # class                 border  backgr. text    indicator child_border
-# client.focused          #9f78e1 #9f78e1 #ffffff #9f78e1   #9f78e1"""
+# client.focused          #9f78e1 #9f78e1 #ffffff #9f78e1   #9f78e1
 # client.focused_inactive #9f78e1 #343252 #ffffff #343252   #343252
-# client.unfocused        #9f78e1 #343252 #c1c1c1 #1e1c3f   #343252
+# client.unfocused        #9f78e1 #343252 #ff00ff #1e1c3f   #343252
 # client.urgent           #9f78e1 #343252 #ffffff #343252   #343252
 # client.placeholder      #9f78e1 #343252 #ffffff #343252   #343252
 # client.background       #ffffff"

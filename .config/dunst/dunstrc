@@ -1,5 +1,5 @@
 [global]
-    font = Ubuntu 16
+    font = Iosevka 16
 
     # Allow a small subset of html markup:
     #   <b>bold</b>
@@ -64,7 +64,7 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "500x5-20+60"
+    geometry = "650x5-20+55"
 
     # Shrink window if it's smaller than the width.  Will be ignored if
     # width is 0.
@@ -151,8 +151,8 @@
     icon_folders = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
 
 [frame]
-    width = 1
-    color = "#ffffff"
+    width = 0
+    color = "#40b4c4"
 
 [shortcuts]
 
@@ -178,17 +178,17 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#1e1c3f"
-    foreground = "#ffffff"
+    background = "#a599e9"
+    foreground = "#1e1c3f"
     timeout = 5
 
 [urgency_normal]
-    background = "#1e1c3f"
-    foreground = "#ffffff"
+    background = "#a599e9"
+    foreground = "#1e1c3f"
     timeout = 5
 
 [urgency_critical]
-    background = "#1e1c3d"
+    background = "#a599e9"
     foreground = "#B14D4C"
     timeout = 5
 
