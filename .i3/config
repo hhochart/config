@@ -300,6 +300,7 @@ set_from_resource $primary         primary
 set_from_resource $secondary       secondary
 set_from_resource $third           third
 
+
 # Theme colors
 # class                   border           backgr.       text             indic.   child_border
   client.focused          #556064          #718ca1      $background      $foreground
@@ -314,11 +315,11 @@ set_from_resource $third           third
 ### settings for i3-gaps: ###
 #############################
 
-gaps inner 14
-gaps outer -2
+gaps inner 12
+gaps outer -1
 # smart_gaps on
 smart_borders on
 
 #polybar
 exec_always --no-startup-id "killall polybar; sh ~/.config/polybar/launch.sh"
-
+exec_always --no-startup-id "setxkbmap -option compose:ralt; setxkbmap -layout us"

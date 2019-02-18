@@ -1,5 +1,5 @@
-Xft.dpi:       96
-!Xft.dpi:       140
+!Xft.dpi:       96
+Xft.dpi:       140
 Xft.antialias: true
 Xft.hinting:   true
 Xft.rgba:      rgb
@@ -156,7 +156,7 @@ URxvt.keysym.Shift-Control-Down:  \033[1;6B
 URxvt.font:                         xft:Iosevka:size=15, \
                                     xft:WenQuanYi Bitmap Song:size=8, \
                                     xft:unifont:style=Medium:antialias=false
-! URxvt.boldFont:                   xft:Iosevka:size=15
+URxvt.boldFont:                   xft:Iosevka:size=15
 ! URxvt.italicFont:                 xft:Iosevka:size=15
 ! URxvt.boldItalicFont:             xft:Iosevka:size=15
 ! URxvt*intensityStyles:            boolean
