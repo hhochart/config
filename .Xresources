@@ -1,5 +1,5 @@
-!Xft.dpi:       96
-Xft.dpi:       140
+Xft.dpi:       96
+!Xft.dpi:       140
 Xft.antialias: true
 Xft.hinting:   true
 Xft.rgba:      rgb
@@ -28,12 +28,12 @@ Xft.lcdfilter: lcddefault
 *color10:                         #8D8F8D
 
 !! yellow dark/light
-*color3:                          #f7ca88
-*color11:                         #f7ca88
+*color3:                          #7cafc2
+*color11:                         #7cafc2
 
 !! blue dark/light
-*color4:                          #7cafc2
-*color12:                         #7cafc2
+*color4:                          #f7ca88
+*color12:                         #f7ca88
 
 !! magenta dark/light
 *color5:                          #ba8baf
@@ -60,8 +60,6 @@ Xcursor.theme: xcursor-breeze-snow
 Xcursor.size:                     0
 
 ! alternative font settings with 'terminus':
-! URxvt.font:      -xos4-terminus-medium-r-normal--16-160-72-72-c-80-iso10646-1
-! URxvt.bold.font: -xos4-terminus-bold-r-normal--16-160-72-72-c-80-iso10646-1
 !! terminus names see end of file!
 
 URxvt.depth:                      32
@@ -153,10 +151,8 @@ URxvt.keysym.Shift-Control-Down:  \033[1;6B
 ! URxvt*pointerColor2:              color
 ! URxvt*borderColor:                color
 ! URxvt*iconFile:                   file
-URxvt.font:                         xft:Iosevka:size=15, \
-                                    xft:WenQuanYi Bitmap Song:size=8, \
-                                    xft:unifont:style=Medium:antialias=false
-URxvt.boldFont:                   xft:Iosevka:size=15
+! URxvt.font:                       xft:Hack Nerd Font Mono:size=16
+! URxvt.boldFont:                   xft:Iosevka:size=15
 ! URxvt.italicFont:                 xft:Iosevka:size=15
 ! URxvt.boldItalicFont:             xft:Iosevka:size=15
 ! URxvt*intensityStyles:            boolean
@@ -176,7 +172,7 @@ URxvt.boldFont:                   xft:Iosevka:size=15
 URxvt*internalBorder:               15
 ! URxvt*borderLess:                 true
 ! URxvt*lineSpace:                  number
-URxvt.letterSpace:                  0
+URxvt.letterSpace:                  1
 ! URxvt*skipBuiltinGlyphs:          boolean
 ! URxvt*pointerBlankDelay:          number
 ! URxvt*backspacekey:               string
