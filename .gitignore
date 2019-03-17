@@ -2,5 +2,6 @@
 !.config/polybar/
 !.i3/
 !.config/dunst/
-!.config/terminator/
+!.config/terminator/**
 !Pictures/wallpaper3.png
+!Pictures/manjaro_white.png
