@@ -212,7 +212,7 @@ type = internal/backlight
 card = intel_backlight
 
 [module/cpu]
-type = internal/cpu
+type = internal/cputray
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
