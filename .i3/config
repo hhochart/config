@@ -260,6 +260,10 @@ exec --no-startup-id clipit
 # exec --no-startup-id blueman-applet
 exec --no-startup-id xautolock -locker blurlock
 # exec_always --no-startup-id fix_xcursor
+exec --no-startup-id "setxkbmap -option ctrl:swapcaps"     # Swap Left Control and Caps Lock
+exec --no-startup-id "setxkbmap -option ctrl:nocaps"       # Make Caps Lock a Control key
+exec --no-startup-id "setxkbmap -option compose:ralt"      # Make right alt as compose key
+exec --no-startup-id "setxkbmap -layout us"      # Set American Keyboard layout
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
@@ -316,7 +320,7 @@ for_window [class="Terminator | terminator"] client.focused #ffffff #ffffff #fff
 #############################
 
 gaps inner 10
-gaps outer 10
+gaps outer 1
 # smart_gaps on
 smart_borders on
 
