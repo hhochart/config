@@ -251,7 +251,7 @@ bindsym $mod+shift+o exec --no-startup-id blurlock
 
 # Autostart applications
 exec --no-startup-id "compton -f --config ~/.config/compton.conf"
-exec_always --no-startup-id "feh --bg-scale ~/Pictures/wallpaper_synth.jpg"
+exec_always --no-startup-id "feh --bg-scale ~/Pictures/wallpaper.jpg"
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
@@ -263,7 +263,7 @@ exec --no-startup-id xautolock -locker blurlock
 exec --no-startup-id "setxkbmap -option ctrl:swapcaps"     # Swap Left Control and Caps Lock
 exec --no-startup-id "setxkbmap -option ctrl:nocaps"       # Make Caps Lock a Control key
 exec --no-startup-id "setxkbmap -option compose:ralt"      # Make right alt as compose key
-exec --no-startup-id "setxkbmap -layout us"      # Set American Keyboard layout
+exec --no-startup-id "setxkbmap -layout us"                # Set American Keyboard layout
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
@@ -305,14 +305,13 @@ set_from_resource $third           third
 
 # Theme colors
 # class                   border           backgr.       text             indic.        child_border
-  client.focused          $primary         $primary      $background      $foreground
-  client.focused          $primary         $primary      $background      $foreground
+  client.focused          $foreground      $foreground   $background      $foreground
   client.focused_inactive $background      $background   $foreground      $background
   client.unfocused        $background      $background   $foreground      $background
   client.urgent           #CB4B16          $foreground   $background      $third
   client.placeholder      $background      $background   $foreground      $background
 
-  client.background       #2B2C2B
+  client.background       #4f4f4f
 
 for_window [class="Terminator | terminator"] client.focused #ffffff #ffffff #ffffff #ffffff #ffffff
 #############################

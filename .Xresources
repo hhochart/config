@@ -48,12 +48,12 @@ Xft.lcdfilter: lcddefault
 *color15:                         #f8f8f8
 
 
-*m_foreground:                    #d3c6ff
-*m_background:                    #1f1d27
-*primary:                         #d3c6ff
+*m_foreground:                    #ffffff
+*m_background:                    #4F4F4F
+*primary:                         #5294E2
 *secondary:                       #ffc284
 *third:                           #2dcd73
-*forth:                           #2488ff
+*forth:                           #ff00ff
 
 
 Xcursor.theme: xcursor-breeze-snow

@@ -127,8 +127,8 @@ index-sort = true
 wrapping-scroll = false
 
 label-mode-padding = 2
-label-mode-foreground = ${colors.bg}
-label-mode-background = ${colors.primary}
+label-mode-foreground = ${colors.primary}
+label-mode-background = ${colors.foreground}
 
 # label-focused = %index% %icon%
 label-focused = %icon%
@@ -142,8 +142,8 @@ label-unfocused-padding = 2
 
 # label-urgent = %index%! %icon%
 label-urgent =  %icon%
-label-urgent-foreground = ${colors.bg}
-label-urgent-background = ${colors.primary}
+label-urgent-foreground = ${colors.primary}
+label-urgent-background = ${colors.foreground}
 label-urgent-padding = 2
 
 # label-visible = %index% %icon%

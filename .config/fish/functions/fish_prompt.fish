@@ -1,1 +1,1 @@
-/home/mamba/.local/share/omf/themes/ocean/fish_prompt.fish
+/home/mamba/.local/share/omf/themes/eclm/fish_prompt.fish

@@ -1,6 +1,6 @@
 [global]
-    frame_width = 0
-    frame_color = "#ffffff"
+    frame_width = 6
+    frame_color = "#5294E2"
 
     font = Iosevka 14
 
@@ -68,7 +68,7 @@
     # the top and down respectevly.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "550x140-12+48"
+    geometry = "550x140-10+45"
 
     # Shrink window if it's smaller than the width.  Will be ignored if
     # width is 0.
@@ -180,13 +180,13 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#d3c6ff"
-    foreground = "#3F3B4C"
+    background = "#ffffff"
+    foreground = "#5294E2"
     timeout = 10
 
 [urgency_normal]
-    background = "#d3c6ff"
-    foreground = "#3F3B4C"
+    background = "#ffffff"
+    foreground = "#5294E2"
     timeout = 10
 
 [urgency_critical]
