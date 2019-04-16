@@ -49,11 +49,11 @@ Xft.lcdfilter: lcddefault
 
 
 *m_foreground:                    #ffffff
-*m_background:                    #4F4F4F
-*primary:                         #5294E2
-*secondary:                       #ffc284
-*third:                           #2dcd73
-*forth:                           #ff00ff
+*m_background:                    #011627
+*primary:                         #c792ea
+*secondary:                       #ecc48d
+*third:                           #7fdbca
+*forth:                           #82AAFF
 
 
 Xcursor.theme: xcursor-breeze-snow

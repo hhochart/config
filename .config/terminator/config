@@ -15,15 +15,16 @@
 [plugins]
 [profiles]
   [[default]]
-    background_color = "#1e1f29"
+    background_color = "#011627"
     background_darkness = 0.92
     background_type = transparent
     cursor_blink = False
-    cursor_color = "#ff79c6"
+    cursor_color = "#80a4c2"
+    cursor_color_fg = False
     font = Iosevka Medium 16
-    foreground_color = "#f8f8f2"
+    foreground_color = "#d6deeb"
     icon_bell = False
-    palette = "#44475a:#ff5555:#50fa7b:#f1fa8c:#8be9fd:#bd93f9:#ff79c6:#94a3a5:#8be9fd:#ff5555:#50fa7b:#f1fa8c:#8be9fd:#bd93f9:#ff79c6:#ffffff"
+    palette = "#2e3436:#ef5350:#80cbc4:#ffeb95:#82aaff:#c792ea:#addb67:#d3d7cf:#555753:#ef5350:#80cbc4:#ffeb95:#82aaff:#c792ea:#addb67:#eeeeec"
     scrollback_infinite = True
     scrollbar_position = hidden
     show_titlebar = False
@@ -52,6 +53,21 @@
     foreground_color = "#d3c6ff"
     icon_bell = False
     palette = "#1f1d27:#d9393e:#2dcd73:#d9b76e:#ffc284:#1f1d27:#8966ff:#ffffff:#5d5a6b:#d9393e:#2dcd73:#d9b76e:#ffc284:#de8d40:#2488ff:#eae5ff"
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
+  [[Night Owl]]
+    background_color = "#011627"
+    background_darkness = 0.92
+    background_type = transparent
+    cursor_blink = False
+    cursor_color = "#80a4c2"
+    cursor_color_fg = False
+    font = Iosevka Medium 16
+    foreground_color = "#d6deeb"
+    icon_bell = False
+    palette = "#2e3436:#ef5350:#80cbc4:#ffeb95:#82aaff:#c792ea:#addb67:#d3d7cf:#555753:#ef5350:#80cbc4:#ffeb95:#82aaff:#c792ea:#addb67:#eeeeec"
     scrollback_infinite = True
     scrollbar_position = hidden
     show_titlebar = False
