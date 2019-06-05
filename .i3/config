@@ -258,10 +258,10 @@ exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 # exec --no-startup-id blueman-applet
-exec --no-startup-id xautolock -locker blurlock
+exec --no-startup-id xautolock -locker -time 1000 blurlock
 # exec_always --no-startup-id fix_xcursor
-exec --no-startup-id "setxkbmap -option ctrl:swapcaps"     # Swap Left Control and Caps Lock
-exec --no-startup-id "setxkbmap -option ctrl:nocaps"       # Make Caps Lock a Control key
+# exec --no-startup-id "setxkbmap -option ctrl:swapcaps"     # Swap Left Control and Caps Lock
+# exec --no-startup-id "setxkbmap -option ctrl:nocaps"       # Make Caps Lock a Control key
 exec --no-startup-id "setxkbmap -option compose:ralt"      # Make right alt as compose key
 exec --no-startup-id "setxkbmap -layout us"                # Set American Keyboard layout
 
@@ -324,5 +324,6 @@ gaps outer 1
 smart_borders on
 
 #polybar
-exec_always --no-startup-id "killall polybar; sh ~/.config/polybar/launch.sh"
+# exec_always --no-startup-id "killall polybar; sh ~/.config/polybar/launch.sh"
+exec_always --no-startup-id "killall polybar; polybar --reload default"
 exec_always --no-startup-id "setxkbmap -option compose:ralt; setxkbmap -layout us"
