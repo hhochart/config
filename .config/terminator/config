@@ -48,11 +48,25 @@
     background_darkness = 1.0
     cursor_blink = False
     cursor_color = "#ffc284"
-    cursor_color_fg = "#ffffff"
     font = Iosevka 16
     foreground_color = "#d3c6ff"
     icon_bell = False
     palette = "#1f1d27:#d9393e:#2dcd73:#d9b76e:#ffc284:#1f1d27:#8966ff:#ffffff:#5d5a6b:#d9393e:#2dcd73:#d9b76e:#ffc284:#de8d40:#2488ff:#eae5ff"
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
+  [[Material-Palenight]]
+    background_color = "#292d3e"
+    background_darkness = 0.92
+    background_type = transparent
+    cursor_blink = False
+    cursor_color = "#ffcc00"
+    cursor_color_fg = False
+    font = Iosevka Medium 16
+    foreground_color = "#a6accd"
+    icon_bell = False
+    palette = "#2e3436:#ff5370:#c3e88d:#ffcb6b:#82aaff:#c792ea:#89ddff:#d3d7cf:#555753:#f07178:#c3e88d:#f78c6c:#729fcf:#bb80b3:#89ddff:#eeeeec"
     scrollback_infinite = True
     scrollbar_position = hidden
     show_titlebar = False
@@ -72,3 +86,4 @@
     scrollbar_position = hidden
     show_titlebar = False
     use_system_font = False
+  [[Violet Dark]]

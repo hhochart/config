@@ -43,8 +43,8 @@ exec --no-startup-id volumeicon
 ################################################################################################
 
 # Screen brightness controls
-# bindsym XF86MonBrightnessUp exec "xbacklight -inc 5; notify-send 'brightness up'"
-# bindsym XF86MonBrightnessDown exec "xbacklight -dec 5; notify-send 'brightness down'"
+# bindsym XF86MonBrightnessUp exec "bash -c 'expr $(cat /sys/class/backlight/intel_backlight/brightness) + 100 | tee /sys/class/backlight/intel_backlight/brightness'"
+# bindsym XF86MonBrightnessDown exec "bash -c 'expr $(cat /sys/class/backlight/intel_backlight/brightness) - 100 | tee /sys/class/backlight/intel_backlight/brightness'"
 
 # Start Applications
 bindsym $mod+F3 exec ranger
