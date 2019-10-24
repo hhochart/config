@@ -15,20 +15,20 @@
 [plugins]
 [profiles]
   [[default]]
-    background_color = "#011627"
-    background_darkness = 0.92
-    background_type = transparent
-    cursor_blink = False
-    cursor_color = "#80a4c2"
-    cursor_color_fg = False
-    font = Iosevka Medium 16
-    foreground_color = "#d6deeb"
-    icon_bell = False
-    palette = "#2e3436:#ef5350:#80cbc4:#ffeb95:#82aaff:#c792ea:#addb67:#d3d7cf:#555753:#ef5350:#80cbc4:#ffeb95:#82aaff:#c792ea:#addb67:#eeeeec"
-    scrollback_infinite = True
-    scrollbar_position = hidden
-    show_titlebar = False
-    use_system_font = False
+      background_color = "#292d3e"
+      background_darkness = 1
+      background_type = transparent
+      cursor_blink = False
+      cursor_color = "#ffcc00"
+      cursor_color_fg = False
+      font = Pragmata Pro 16
+      foreground_color = "#a6accd"
+      icon_bell = False
+      palette = "#2e3436:#ff5370:#c3e88d:#ffcb6b:#82aaff:#c792ea:#89ddff:#d3d7cf:#555753:#f07178:#c3e88d:#f78c6c:#729fcf:#bb80b3:#89ddff:#eeeeec"
+      scrollback_infinite = True
+      scrollbar_position = hidden
+      show_titlebar = False
+      use_system_font = False
   [[Dracula]]
     background_color = "#1e1f29"
     background_darkness = 0.92
@@ -63,7 +63,7 @@
     cursor_blink = False
     cursor_color = "#ffcc00"
     cursor_color_fg = False
-    font = Iosevka Medium 16
+    font = Inconsolata 16
     foreground_color = "#a6accd"
     icon_bell = False
     palette = "#2e3436:#ff5370:#c3e88d:#ffcb6b:#82aaff:#c792ea:#89ddff:#d3d7cf:#555753:#f07178:#c3e88d:#f78c6c:#729fcf:#bb80b3:#89ddff:#eeeeec"

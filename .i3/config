@@ -251,7 +251,8 @@ bindsym $mod+shift+o exec --no-startup-id blurlock
 
 # Autostart applications
 exec --no-startup-id "compton -f --config ~/.config/compton.conf"
-exec_always --no-startup-id "feh --bg-scale ~/Pictures/wallpaper.jpg"
+# exec_always --no-startup-id "feh --bg-scale ~/Pictures/wallpaper.jpg"
+exec_always --no-startup-id "hsetroot -solid '#a6accd99'"
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
@@ -318,8 +319,8 @@ for_window [class="Terminator | terminator"] client.focused #ffffff #ffffff #fff
 ### settings for i3-gaps: ###
 #############################
 
-gaps inner 10
-gaps outer 1
+gaps inner 15
+gaps outer 0
 # smart_gaps on
 smart_borders on
 

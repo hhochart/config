@@ -1,14 +1,11 @@
 ;=====================================================
 [colors]
-
-# background = ${xrdb:m_background}
-background = #ffffffffff
+background = ${xrdb:m_background}
 foreground = ${xrdb:m_foreground}
-bg = ${xrdb:m_background}
-primary = ${xrdb:m_foreground}
+bg = ${xrdb:m_foreground}
+primary = ${xrdb:primary}
 secondary = ${xrdb:secondary}
 third = ${xrdb:third}
-forth = ${xrdb:forth}
 
 [global/wm]
 margin-top = 5
@@ -28,9 +25,9 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 
 overline-size = 2
-overline-color = ${colors.third}
+overline-color = ${colors.foreground}
 underline-size = 2
-underline-color = ${colors.third}
+underline-color = ${colors.foreground}
 
 # no borders
 # border-top-size = 2
@@ -43,7 +40,7 @@ border-color = #ffffffffff
 module-margin-left = 0
 module-margin-right = 0
 
-font-0 = Iosevka:pixelsize=14;3
+font-0 = Pragmata Pro:pixelsize=14;3
 font-1 = Font awesome 5 free:style=Solid:fontformat=truetype:size=14;3
 font-2 = Font awesome 5 Brands:style=Solid:fontformat=truetype:size=16;3
 font-3 = siji:pixelsize=10
@@ -127,12 +124,12 @@ index-sort = true
 wrapping-scroll = false
 
 label-mode-padding = 2
-label-mode-foreground = ${colors.bg}
-label-mode-background = ${colors.primary}
+label-mode-foreground = ${colors.foreground}
+label-mode-background = ${colors.background}
 
 # label-focused = %index% %icon%
 label-focused = %icon%
-label-focused-background = #22ffffff
+label-focused-background = ${colors.background}
 label-focused-underline = ${colors.foreground}
 label-focused-padding = 2
 
@@ -142,7 +139,7 @@ label-unfocused-padding = 2
 
 # label-urgent = %index%! %icon%
 label-urgent =  %icon%
-label-urgent-foreground = ${colors.bg}
+label-urgent-foreground = ${colors.background}
 label-urgent-background = ${colors.foreground}
 label-urgent-padding = 2
 

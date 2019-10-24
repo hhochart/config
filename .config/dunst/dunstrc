@@ -1,8 +1,8 @@
 [global]
-    frame_width = 6
-    frame_color = "#ecc48d"
+    frame_width = 3
+    frame_color = "#a6accd"
 
-    font = Iosevka 14
+    font = Pragmata Pro 14
 
     # Allow a small subset of html markup:
     #   <b>bold</b>
@@ -68,7 +68,7 @@
     # the top and down respectevly.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "550x140-10+45"
+    geometry = "475x140-14+49"
 
     # Shrink window if it's smaller than the width.  Will be ignored if
     # width is 0.
@@ -180,18 +180,18 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#011627"
-    foreground = "#ecc48d"
+    background = "#292d3e"
+    foreground = "#a6accd"
     timeout = 10
 
 [urgency_normal]
-    background = "#011627"
-    foreground = "#ecc48d"
+    background = "#292d3e"
+    foreground = "#a6accd"
     timeout = 10
 
 [urgency_critical]
     background = "#D62929"
-    foreground = "#b7c5d3"
+    foreground = "#a6accd"
     timeout = 0
 
 

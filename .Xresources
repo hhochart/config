@@ -7,13 +7,13 @@ Xft.autohint:  false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-*background:                      #1d252c
-*foreground:                      #d8d8d8
+*background:                      #292d3e
+*foreground:                      #a6accd
 *fading:                          8
 *fadeColor:                       black
-*cursorColor:                     #ebbf83
-*pointerColorBackground:          #2B2C2B
-*pointerColorForeground:          #ebbf83
+*cursorColor:                     #c792ea
+*pointerColorBackground:          #c792ea
+*pointerColorForeground:          #a6accd
 
 !! black dark/light
 *color0:                          #222D31
@@ -48,11 +48,11 @@ Xft.lcdfilter: lcddefault
 *color15:                         #f8f8f8
 
 
-*m_foreground:                    #ffffff
-*m_background:                    #011627
+*m_foreground:                    #a6accd
+*m_background:                    #292d3e
 *primary:                         #c792ea
-*secondary:                       #ecc48d
-*third:                           #7fdbca
+*secondary:                       #ffcb6b
+*third:                           #89ddff
 *forth:                           #82AAFF
 
 
